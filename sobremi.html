@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre mi</title>
-    <link href="/css/style2.css" rel="stylesheet" />
+    <link href="./css/style2.css" rel="stylesheet" />
   </head>
   <body class="color">
     <main>
@@ -12,10 +12,16 @@
         <div>
           <h1><a href="index.html"><?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
             <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z" fill="#080341"/>
-            </svg></a></h1>
+
+              <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+              
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+              
+              <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M21.4498 10.275L11.9998 3.1875L2.5498 10.275L2.9998 11.625H3.7498V20.25H20.2498V11.625H20.9998L21.4498 10.275ZM5.2498 18.75V10.125L11.9998 5.0625L18.7498 10.125V18.75H14.9999V14.3333L14.2499 13.5833H9.74988L8.99988 14.3333V18.75H5.2498ZM10.4999 18.75H13.4999V15.0833H10.4999V18.75Z" fill="#ffff"/> </g>
+              
+              </svg></a></h1>
         </div>
-        <div><a>Inicio</a></div>
+        <div><a href="index.html">Inicio</a></div>
       </section>
 
       <section id="Experiencia">
@@ -179,20 +185,25 @@
         <div></div>
       </footer>
     </main>
-    <script src="/javascript/main.js"></script>
+    <script src="./javascript/main.js"></script>
 
     <script>
       /*---------SECTION EXPERIENCIA-----------*/
       animar_child("Experiencia", ".child");
       /*2. Para el progress-bar*/
-      animar_progress_bar("timelines", "progress-bar");
+      animar_progress_bar("Experiencia", "progress-bar",30);
       /* 3. Para hacer efecto de carga en el ciculo-progress*/
       cargar_circulo(".circular-progress");
       animar_child("educacion", ".child2");
       /*2. Para el progress-bar*/
-      animar_progress_bar("educacion", "progress-bar2");
+      animar_progress_bar("referencia", "progress-bar2");
       /* 3. Para hacer efecto de carga en el ciculo-progress*/
       cargar_circulo(".circular-progress2");
+      skills("habilidades",'.progress-line')
+  
+
+
+
     </script>
   </body>
 </html>

@@ -1,15 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function() {
-    var header = document.getElementById("bar");
-
-    // Agrega un listener para el evento de desplazamiento
-    window.addEventListener("scroll", function() {
-        // Obtén la posición de desplazamiento vertical
-        var scrollTop = window.scrollY;
-
-        // Aplica el desenfoque solo cuando el desplazamiento es mayor que 0
-        header.style.backdropFilter = scrollTop > 0 ? "blur(10px)" : "blur(0)";
-    });
-});*/
 
 
 function showSidebar(){
