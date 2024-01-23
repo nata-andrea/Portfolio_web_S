@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián legarda</title>
+    <link href="/css/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/assets/Iconos/logo_icono.ico"/>
+</head>
+<body class="color">
+    <main>
+        <header id="miheader">
+            <nav id="naav">
+                <ul class="sidebar">
+                    <li onclick="hideSidebar()" class="close"><a class="cerrar"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="50px" height="26px"><g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M9.15625,6.3125l-2.84375,2.84375l15.84375,15.84375l-15.9375,15.96875l2.8125,2.8125l15.96875,-15.9375l15.9375,15.9375l2.84375,-2.84375l-15.9375,-15.9375l15.84375,-15.84375l-2.84375,-2.84375l-15.84375,15.84375z"></path></g></g></svg></a></li>
+                    <li><a href="#inicio" onclick="hideSidebar()" >Inicio</a></li>
+                    <li><a href="#servicios" onclick="hideSidebar()">Servicios</a></li>
+                    <li><a href="#sobremi" onclick="hideSidebar()">Sobre mi</a></li>
+                    <li><a href="#por-que-elegirme" onclick="hideSidebar()">Por qué elegirme</a></li>
+                    <li><a href="#Contacto" onclick="hideSidebar()">Contacto</a></li>
+                </ul>
+                <ul class="bar" id="bar">
+                    <!--<li><a href="#">Logo</a></li>-->
+                    <li class="hideOnMobile"><a href="#inicio">Inicio</a></li>
+                    <li class="hideOnMobile"><a href="#servicios">Servicios</a></li>
+                    <li class="hideOnMobile"><a href="#sobremi">Sobre mi</a></li>
+                    <li class="hideOnMobile"><a href="#por-que-elegirme">Por qué elegirme</a></li>
+                    <li class="hideOnMobile"><a href="#Contacto">Contacto</a></li>
+                    <li class="menu-button" onclick="showSidebar()"><a><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="26px" height="26px"><g fill-opacity="0" fill="#dddddd" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,256v-256h256v256z" id="bgRectangle"></path></g><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M5,8c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,23c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175zM5,38c-0.72127,-0.0102 -1.39216,0.36875 -1.75578,0.99175c-0.36361,0.623 -0.36361,1.39351 0,2.01651c0.36361,0.623 1.0345,1.00195 1.75578,0.99175h40c0.72127,0.0102 1.39216,-0.36875 1.75578,-0.99175c0.36361,-0.623 0.36361,-1.39351 0,-2.01651c-0.36361,-0.623 -1.0345,-1.00195 -1.75578,-0.99175z"></path></g></g></svg></a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="inicio" id="inicio">
+            <div class="content">
+                <h1>Sebastián legarda</h1>
+                <p>
+                    Derecho <br> comercial y <br>de la Empresa
+                </p>
+            </div>
+            <div class="image">
+                <img src="/assets/imagenes/logo.png" alt="logo"/>
+            </div>
+        </section>
+
+        <section  id="servicios">
+        <h2 class="title">Servicios</h2>
+        <div class="carrousel">
+            <div class="carrousel__container">
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Asesoría Legal</h3>
+                    <p>
+                        Asesoría legal y acompañamiento continuo a empresas. 
+                        Mi enfoque se basa en proporcionar recomendaciones
+                        fundamentadas en el conocimiento del modelo de negocio de la empresa,
+                        aplicando las mejores prácticas y estrategias dentro del marco legal.
+                    </p>
+                </div>
+
+            
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Derecho corporativo,<br> comercial,contractual <br>y laboral</h3>
+                    <p>
+                        Asesoría especializada para garantizar el cumplimiento normativo, 
+                        la protección de tus intereses en todas las etapas de tu negocio y asegurar
+                        el éxito de tus transacciones comerciales.
+                    </p>
+                </div>
+
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Solución de Conflictos</h3>
+                    <p>
+                        Soluciones estratégicas para proteger los intereses de tu empresa.
+                        Minimiza riesgos y recupera la tranquilidad en tus operaciones
+                        comerciales con nuestra asesoría especializada en resolución de conflictos.
+                    </p>
+                </div>
+
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Litigios</h3>
+                    <p>
+                        Defensa de tus intereses, proporcionando estrategias legales
+                        robustas y soluciones efectivas para enfrentar cualquier litigio 
+                        y proteger el bienestar de tu empresa.
+                    </p>
+                </div>
+
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Litigios</h3>
+                    <p>
+                        Defensa de tus intereses, proporcionando estrategias legales
+                        robustas y soluciones efectivas para enfrentar cualquier litigio 
+                        y proteger el bienestar de tu empresa.
+                    </p>
+                </div>
+
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Protección al consumidor</h3>
+                    <p>
+                        Protección frente a prácticas comerciales injustas y 
+                        cualquier situación que afecte tus derechos como consumidor.
+                    </p>
+                </div>
+
+                <div class="carrousel-item">
+                    <span><img src="/assets/Iconos/prueba.png"/></span>
+                    <h3>Cumplimiento Normativo</h3>
+                    <p>
+                        Mantener tu negocio alineado con las regulaciones vigentes,
+                        mitigando riesgos legales y fortaleciendo la ética corporativa, 
+                        así como desarrollar e implementar políticas y procedimientos que 
+                        garanticen el cumplimiento normativo en todas las áreas de tu operación.
+                    </p>
+                </div>
+
+        </div>
+
+        </div>
+        </section>
+
+        <section id="sobremi">
+            <h2 class="title"> Sobre mi</h2>
+            <div class="wrapper">
+                <div class="foto-perfil">
+                    <img src="/assets/imagenes/sobre_mi.png" alt="sobre_mi">
+                </div>
+                <div class="perfil">
+                    <h2>Sebastián legarda<h2>
+                    <br>
+                    <h3>Abogado</h3>
+                    <br>
+                    <p>Abogado especializado en el sector empresarial, con experiencia en litigios,
+                    negociación y contratos, destacando en la defensa de los derechos del consumidor y 
+                    el cumplimiento normativo. Con un enfoque pragmático que se refleja en estrategias 
+                    efectivas para resolver disputas comerciales y facilitar transacciones exitosas.</p>
+                    <br>
+                    <a href="sobremi.html"><button>Ver más</button></a>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="por-que-elegirme">
+            <h2 class="title"> Por qué elegirme</h2>
+            <div class="frase">
+                <p>
+                    Al elegirme como tu abogado, recibirás un asesoramiento 
+                    legal excepcional respaldado por mi equipo, con una sólida
+                     formación académica y amplia experiencia en derecho empresarial.
+                </p>
+            </div>
+            <div class="razones">
+                <div>
+                    <div class="icono"><img src="/assets/Iconos/experiencia.png"/></div>
+                    <p>Amplia experiencia judicial  </p>
+                </div>
+
+                <div>
+                    <div class="icono"><img src="/assets/Iconos/servicio.png"/></div>
+                    <p>Servicio eficiente</p>
+                </div>
+
+                <div>
+                    <div class="icono"><img src="/assets/Iconos/reembolso.png"/></div>
+                    <p>Casos de éxito en transacciones comerciales</p>
+                </div>
+
+                <div>
+                    <div class="icono"><img src="/assets/Iconos/conflicto.png"/></div>
+                    <p>Casos de éxito en solución de conflictos comerciales</p>
+                </div>
+
+                <div>
+                    <div class="icono"><img src="/assets/Iconos/orientacion.png"/></div>
+                    <p>Orientación a resultados</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/javascript/script.js"></script>
+
+    <script>
+        opacidad_inicial('inicio','servicios')
+        transicion()
+    </script>
+
+  
+</body>
+</html>

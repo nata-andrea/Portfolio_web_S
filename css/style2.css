@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  /*text-transform: capitalize*/
+}
+
+:root {
+  --color-fondo: linear-gradient(to left, #182848, #4b6cb7) no-repeat;
+  --colo-menu: #faf9f8;
+  --color-title: #e4f5f8;
+  --color-subtitle2: #aaa7a7;
+  --color-subtitle: #e8e3de;
+  --color-letter: #c8bcbc;
+  --color-seccion: #86e7f8;
+  --letter-titulos: "Roboto Condensed";
+  --letter-subtitulos: "Lora";
+  --letter-textos: "Times";
+  --color-line: #faf6f6;
+  --color-gradient-circular: conic-gradient(#86e7f8 3.6deg, #faf9f8 0deg);
+  /*    --size-title: 2.5vw;
+  --size-subtitle: 2vw;
+  --size-subtitle2: 1.5vw;
+  --size-letter: 1.3vw;
+  */
+
+  --size-title: 4rem;
+  --size-subtitle: 24px;
+  --size-subtitle2: 19px;
+  --size-letter: 17px;
+}
+
+::selection {
+  background: white;
+  color: black;
+}
+
+.color {
+  background: var(--color-fondo);
+}
+
+#volver,
+#Experiencia,
+#habilidades {
+  margin-top: 50px;
+  position: relative;
+}
+
+#Experiencia,
+#educacion {
+  margin: 150px 230px; /*cambiar el margin en el responsive*/
+}
+#Experiencia {
+  margin-top: 20px;
+}
+h1 {
+  font-family: var(--letter-titulos);
+  font-size: var(--size-title); /*el tamaño cambia con la pantalla usar vw*/
+  color: var(--color-title);
+}
+
+h2 {
+  font-family: var(--letter-subtitulos);
+  font-size: var(--size-subtitle);
+  color: var(--color-subtitle);
+}
+
+h3 {
+  font-family: var(--letter-subtitulos);
+  font-size: var(--size-subtitle2);
+  color: var(--color-subtitle2);
+}
+p {
+  font-family: var(--letter-textos);
+  font-size: var(--size-letter);
+  color: var(--color-letter);
+}
+.title {
+  position: relative;
+  text-align: center;
+}
+
+#volver {
+  margin: 60px 230px 30px 220px;
+  display: flex;
+  align-items: center;
+}
+
+/*-------SECTION VOLVER*/
+
+#volver div {
+  position: relative;
+  padding-right: 10px;
+}
+#volver div a {
+  cursor: pointer;
+  color: var(--color-line);
+  font-size: var(--size-letter);
+}
+
+#volver div a:hover {
+  color: var(--color-seccion);
+  font-size: 18px;
+}
+#volver svg{
+  width:50px;
+  height:50px
+}
+/*-----------SECTION EXPERIENCIA AND SECTION EDUCATION-------------*/
+
+#timelines,
+#timelines2 {
+  position: relative;
+}
+#timelines::before,
+#timelines2::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  left: 0;
+  height: 100%;
+  background: var(--color-line);
+}
+#progress-bar,
+#progress-bar2 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 3px;
+  height: 100%; /*modificar 100%*/
+  background: var(--color-seccion);
+}
+
+.child,
+.child2 {
+  position: relative;
+  margin: 60px;
+  text-align: justify;
+  opacity: 1; /*Cambiar aqui a 0*/
+  margin-right: 0px;
+}
+
+.circular-progress,
+.circular-progress2 {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: var(--color-line);
+  left: -74px;
+  display: flex;
+  align-items: center;
+  background: var(--color-gradient-circular);
+  justify-content: center;
+}
+
+.circular-progress::before,
+.circular-progress2::before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--color-letter);
+  background-color: #0c0cf3;
+}
+
+.content,
+.content2 {
+  width: 100%;
+  padding: 0px;
+  padding-left: 60px;
+  color: white;
+  position: relative;
+  /*width: 100%; posiblemente lo use en resonsive*/
+  text-align: justify;
+  margin: auto;
+}
+
+/*Para animar el child*/
+._show {
+  opacity: 1;
+  animation: __show 0.5s cubic-bezier(0.99, -0.7, 0.2, 1.9);
+}
+._hide {
+  opacity: 0;
+  animation: __hide 0.5s cubic-bezier(0.99, -0.7, 0.2, 1.9);
+}
+
+@keyframes __show {
+  0% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes __hide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
+/*---HABILIDADES---*/
+#habilidades {
+  max-width: 100%;
+  min-height: 110vh; /*disminutir aqui en el responsive*/
+  background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)),
+    url("/assets/imagenes/habilidades.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.subject {
+  font-family: var(--letter-subtitulos);
+  color: var(--color-subtitle);
+  font-size: 19px /*var(--size-subtitle2)*/;
+  padding: 5px 0px;
+}
+.skills-container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background-color: #e4f5f8;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.progress-bar::after {
+  position: absolute;
+  content: attr(value);
+  top: -35px;
+  right: 0;
+  color: #e4f5f8;
+  font-size: 18px;
+}
+.progress-line {
+  position: absolute;
+  width: 0%;
+  height: 7px;
+  background-color: var(--color-seccion);
+  border-radius: 15px;
+  top: -1px;
+  animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+@keyframes animate {
+  100% {
+    width: 100%;
+  }
+}
+
+.progress-line::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-seccion);
+}
+#habilidades .title {
+  bottom: 120px;
+}
+
+footer {
+  background: rgb(22, 22, 22);
+}
+footer div {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: left;
+}
+/*----------------Responsive-----------*/
+@media (min-width: 1440px) {
+  main {
+    margin: 0 auto;
+    max-width: 1440px; /*cambiar el header*/
+  }
+}
+
+@media (max-width: 1126px) {
+  #Experiencia,
+  #educacion {
+    /*cambiar el margin en el responsive*/
+    margin: 150px 150px;
+  }
+
+  #Experiencia {
+    margin-top: 60px;
+  }
+  #volver {
+    margin-left: 140px;
+  }
+  .subject {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 868px) {
+  #Experiencia,
+  #educacion {
+    /*cambiar el margin en el responsive*/
+    margin: 150px 90px;
+  }
+  #Experiencia {
+    margin-top: 60px;
+  }
+  #volver {
+    margin-left: 80px;
+  }
+  #habilidades {
+    min-height: 90vh;
+    /*margin-top: 0px;*/
+  }
+
+  #habilidades .title {
+    bottom: 80px;
+  }
+  .subject {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 702px) {
+  #Experiencia,
+  #educacion {
+    /*cambiar el margin en el responsive*/
+    margin: 150px 70px;
+  }
+  #Experiencia {
+    margin-top: 60px;
+  }
+  #volver {
+    margin-left: 60px;
+  }
+
+  .content,
+  .content2 {
+    padding-left: 0px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 13px;
+  }
+
+  #habilidades {
+    min-height: 75vh;
+    /*margin-top: 0px;*/
+  }
+  .skills-container {
+    width: 60%;
+    margin-bottom: 50px;
+  }
+
+  #habilidades .title {
+    bottom: 60px;
+  }
+  #educacion {
+    margin-bottom: 90px;
+  }
+  .subject {
+    font-size: 12px;
+  }
+}
+@media (max-width: 435px) {
+  #Experiencia,
+  #educacion {
+    /*cambiar el margin en el responsive*/
+    margin: 150px 30px;
+  }
+  #Experiencia {
+    margin-top: 60px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+  }
+  #volver {
+    margin: 30px 30px;
+  }
+  #Experiencia {
+    margin-bottom: 80px;
+  }
+  #educacion {
+    margin-bottom: 50px;
+  }
+  #Experiencia,
+  #educacion {
+    margin-top: 40px;
+  }
+  #volver div a {
+    font-size: 12px;
+  }
+
+  #habilidades {
+    min-height: 75vh;
+    /*margin-top: 0px;*/
+  }
+
+  .skills-container {
+    width: 70%;
+    margin-bottom: 0px;
+    bottom: 100px;
+  }
+
+  /*#educacion {
+    margin-bottom: 50px;
+  }*/
+}
+
+/*el minimo es 280*/
