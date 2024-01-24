@@ -87,6 +87,7 @@ p {
 .title {
   position: relative;
   text-align: center;
+  letter-spacing: 2px;
 }
 
 #volver {

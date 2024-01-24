@@ -67,6 +67,25 @@ function animar_progress_bar(seccion, progress, distanciaAdicional) {
   });
 }
 
+
+function animar_progress_bar2(seccion, progress, distanciaAdicional) {
+  window.addEventListener("scroll", function () {
+    var section = document.getElementById(seccion);
+    var sectionStart = section.offsetTop;
+    var sectionEnd = sectionStart + section.offsetHeight;
+
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    var winScroll = scrollTop - sectionStart;
+    var height = sectionEnd - sectionStart;
+    var scrolled = (winScroll / height) * 100 + distanciaAdicional;
+
+    if (scrolled < 0) scrolled = 0;
+    if (scrolled > 100) scrolled = 100;
+    document.getElementById(progress).style.height = scrolled + "%";
+  });
+}
+
 // Uso de la función con una distancia adicional de 20
 
 

@@ -165,6 +165,7 @@ sidebar li:first-child {
   font-size: 4rem;
   color: rgba(248, 247, 246,0.9);
   font-family: var(--letter-titulos);
+  letter-spacing: 1px;
 }
 
 .inicio .content p {
@@ -172,7 +173,7 @@ sidebar li:first-child {
   color: rgba(248, 247, 246);
   padding: 1rem 0;
   font-family: var(--letter-subtitulos);
-  line-height: 0.9;
+  line-height: 1;
   font-weight: bold;
 }
 
@@ -183,7 +184,7 @@ sidebar li:first-child {
 
 #servicios,
 #sobremi,
-#por-que-elegirme {
+#por-que-elegirme,#contacto {
   margin: 100px 100px; /*todas las secciones con el mismo margin poner aqui*/
 }
 
@@ -199,6 +200,7 @@ sidebar li:first-child {
   font-family: var(--letter-subtitulos);
   font-size: var(--size-title); /*el tamaño cambia con la pantalla usar vw*/
   color: var(--colo-menu);
+  letter-spacing: 2px;
 }
 
 .carrousel__container {
@@ -326,6 +328,7 @@ sidebar li:first-child {
   font-family: var(--letter-textos);
   font-size: var(--size-letter);
   margin: 1rem 0;
+  letter-spacing: 0.5px;
 }
 
 #sobremi button {
@@ -573,7 +576,7 @@ sidebar li:first-child {
 
   #servicios,
   #sobremi,
-  #por-que-elegirme {
+  #por-que-elegirme,#contacto {
     margin: 70px 70px; /*todas las secciones con el mismo margin poner aqui*/
   }
 
@@ -626,7 +629,7 @@ sidebar li:first-child {
   }
   #servicios,
   #sobremi,
-  #por-que-elegirme {
+  #por-que-elegirme,#contacto {
     margin: 70px 30px; /*todas las secciones con el mismo margin poner aqui*/
   }
   .carrousel-item {
