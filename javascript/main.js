@@ -70,7 +70,7 @@ function animar_progress_bar(seccion, progress, distanciaAdicional) {
 // Uso de la función con una distancia adicional de 20
 
 
-
+/*
 function cargar_circulo(id_circulo) {
   let circularProgressList = document.querySelectorAll(id_circulo);
   let end = 100;
@@ -125,4 +125,4 @@ function cargar_circulo(id_circulo) {
 
   handleScroll();
   window.addEventListener("scroll", handleScroll);
-}
+}*/

@@ -15,11 +15,12 @@
 
 :root {
   --color-fondo: linear-gradient(to left, #182848, #4b6cb7) no-repeat;
-  --colo-menu: #faf9f8;
-  --color-title: #e4f5f8;
-  --color-subtitle2: #aaa7a7;
-  --color-subtitle: #e8e3de;
-  --color-letter: #c8bcbc;
+  --colo-menu: rgb(248, 247, 246);
+  --color-title: rgba(248, 247, 246);
+  --color-subtitle:rgba(248, 247, 246, 0.9) ;
+  --color-subtitle2: rgba(248, 247, 246, 0.7);
+  --color-footer:rgba(10, 10, 10, 0.955);
+  --color-letter: rgba(248, 247, 246, 0.8);
   --color-seccion: #86e7f8;
   --letter-titulos: "Roboto Condensed";
   --letter-subtitulos: "Lora";
@@ -39,8 +40,8 @@
 }
 
 ::selection {
-  background: white;
-  color: black;
+  background:var(--colo-menu);
+  color: var(--color-footer);
 }
 
 .color {
@@ -154,11 +155,11 @@ p {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background: var(--color-line);
+  background: var(--color-seccion);
   left: -74px;
   display: flex;
   align-items: center;
-  background: var(--color-gradient-circular);
+  /*background: var(--color-gradient-circular);*/
   justify-content: center;
 }
 
@@ -170,7 +171,7 @@ p {
   width: 10px;
   border-radius: 50%;
   border: 1px solid var(--color-letter);
-  background-color: #0c0cf3;
+  background-color:var(--colo-menu);
 }
 
 .content,
@@ -178,7 +179,7 @@ p {
   width: 100%;
   padding: 0px;
   padding-left: 60px;
-  color: white;
+  color: var(--color-letter);
   position: relative;
   /*width: 100%; posiblemente lo use en resonsive*/
   text-align: justify;
@@ -247,7 +248,7 @@ p {
   position: relative;
   width: 100%;
   height: 7px;
-  background-color: #e4f5f8;
+  background-color: var(--color-line);
   border-radius: 15px;
   margin-bottom: 20px;
 }
@@ -256,7 +257,7 @@ p {
   content: attr(value);
   top: -35px;
   right: 0;
-  color: #e4f5f8;
+  color:var(--color-seccion);
   font-size: 18px;
 }
 .progress-line {
@@ -288,12 +289,14 @@ p {
   transform: translate(-50%, -50%);
   background-color: var(--color-seccion);
 }
+
+
 #habilidades .title {
   bottom: 120px;
 }
 
 footer {
-  background: rgb(22, 22, 22);
+  background: var(--color-footer);
 }
 footer div {
   position: relative;
@@ -343,7 +346,7 @@ h2 {
     margin-left: 80px;
   }
   #habilidades {
-    min-height: 90vh;
+    min-height: 100vh;
     /*margin-top: 0px;*/
   }
 
@@ -389,12 +392,12 @@ h2 {
   }
 
   #habilidades {
-    min-height: 75vh;
+    min-height: 100vh;
     /*margin-top: 0px;*/
   }
   .skills-container {
-    width: 60%;
-    margin-bottom: 50px;
+    width: 70%;
+    /*margin-bottom: 50px;*/
   }
 
   #habilidades .title {
@@ -449,15 +452,11 @@ h2 {
   }
 
   #habilidades {
-    min-height: 75vh;
+    min-height: 100vh;
     /*margin-top: 0px;*/
   }
 
-  .skills-container {
-    width: 70%;
-    margin-bottom: 0px;
-    bottom: 100px;
-  }
+ 
 
   /*#educacion {
     margin-bottom: 50px;
@@ -465,3 +464,9 @@ h2 {
 }
 
 /*el minimo es 280*/
+
+@media (max-width: 326px) {
+.skills-container {
+  width: 80%;
+  /*margin-bottom: 50px;*/
+}}

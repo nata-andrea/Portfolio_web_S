@@ -15,11 +15,12 @@
 
 :root {
   --color-fondo: linear-gradient(to left, #182848, #4b6cb7);
-  --colo-menu: #faf9f8;
-  --color-title: #e4f5f8;
-  --color-subtitle2: #aaa7a7;
-  --color-subtitle: #e8e3de;
-  --color-letter: #c8bcbc;
+  --colo-menu: rgb(248, 247, 246);
+  --color-title: rgba(248, 247, 246);
+  --color-subtitle:rgba(248, 247, 246, 0.9) ;
+  --color-subtitle2: rgba(248, 247, 246, 0.75);
+  --color-footer:rgba(10, 10, 10, 0.955);
+  --color-letter: rgba(248, 247, 246, 0.8);
   --color-seccion: #86e7f8;
   --letter-titulos: "Roboto Condensed";
   --letter-subtitulos: "Lora";
@@ -27,7 +28,7 @@
   --size-subtitle: 24px;
   --size-subtitle2: 19px;
   --size-letter: 17px;
-  --size-title: 2.5rem;
+  --size-title: 3rem;
 }
 
 ::selection {
@@ -79,7 +80,7 @@ nav a {
   padding: 0 30px;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--colo-menu);
   font-weight: bold;
   font-size: var(--size-letter);
   cursor: pointer;
@@ -102,7 +103,6 @@ sidebar li:first-child {
   height: 70vh;
   max-width: 70%;
   z-index: 999;
-  background-color: rgb(33, 33, 112);
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter:blur(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -110,16 +110,16 @@ sidebar li:first-child {
   flex-direction: column;
   align-items: flex-start; /*posiciona hacia un lado*/
   justify-content: flex-start; /*lleva hacia arriba*/
-  transform: translateX(-20%) translateY(26%) scale(1) translateZ(0px);
+  transform: translateX(-20%) translateY(22%) scale(1) translateZ(0px);
   animation: zoomIn 0.5s ease;
 }
 @keyframes zoomIn {
   from {
-    transform: translateX(-20%) translateY(26%) scale(0.8) translateZ(0);
+    transform: translateX(-20%) translateY(22%) scale(0.8) translateZ(0);
     opacity: 0;
   }
   to {
-    transform: translateX(-20%) translateY(26%) scale(1) translateZ(0);
+    transform: translateX(-20%) translateY(22%) scale(1) translateZ(0);
     opacity: 1;
   }
 }
@@ -163,13 +163,13 @@ sidebar li:first-child {
 
 .inicio .content h1 {
   font-size: 4rem;
-  color: var(--color-title);
+  color: rgba(248, 247, 246,0.9);
   font-family: var(--letter-titulos);
 }
 
 .inicio .content p {
   font-size: 3.5rem;
-  color: var(--color-subtitle);
+  color: rgba(248, 247, 246);
   padding: 1rem 0;
   font-family: var(--letter-subtitulos);
   line-height: 0.9;
@@ -198,7 +198,7 @@ sidebar li:first-child {
   /*width: 100%;*/
   font-family: var(--letter-subtitulos);
   font-size: var(--size-title); /*el tamaño cambia con la pantalla usar vw*/
-  color: var(--color-title);
+  color: var(--colo-menu);
 }
 
 .carrousel__container {
@@ -360,7 +360,7 @@ sidebar li:first-child {
 }
 .frase p {
   text-align: center;
-  color: var(--color-subtitle);
+  color: var(--color-title);
   font-family: var(--letter-subtitulos);
   font-size: var(--size-letter);
 }
@@ -368,28 +368,33 @@ sidebar li:first-child {
 .razones div p {
   text-align: center;
   padding-top: 20px;
-  
-  font-family: var(--letter-textos);
+  font-family: var(--letter-subtitulos);
   font-size: var(--size-letter);
+  margin-bottom: 70px;
 }
 .razones {
-  display: flex;
-  justify-content: space-between;
+  display: flex; 
+  justify-content: center; /*space-around*/
+  flex-wrap: wrap; /**/
+  align-items: flex-start; /**/
   width: 100%;
 }
 
 .razones div {
-  width: 210px;
+  width: 200px;
   height: auto;
-  padding: 0 10px;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
+  color: var(--color-subtitle);
 }
 
 #por-que-elegirme img {
   height: 70px;
   width: 70px;
+  border-radius: 50%;
 }
 
 #por-que-elegirme .icono {
@@ -405,13 +410,11 @@ sidebar li:first-child {
 
 #por-que-elegirme .razones div .icono:hover {
   background: var(--colo-menu);
-  color: var(--color-subtitle);
   width: 130px;
   height: 130px;
 }
 #por-que-elegirme .razones div:hover {
-
-    color: var(--colo-menu);
+    color: var(--color-seccion);
   
 }
 
@@ -445,7 +448,7 @@ sidebar li:first-child {
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .carrousel-item {
@@ -490,11 +493,12 @@ sidebar li:first-child {
   .frase {
     padding: 70px 80px 100px 80px;
   }
-
+/*
   .razones {
     display: block;
-  }
+  }*/
 
+  /*
   .razones div {
     width: 100%;
     display: flex;
@@ -522,9 +526,26 @@ sidebar li:first-child {
   #por-que-elegirme .razones div .icono:hover {
     width: 205px;
     height: 205px;
+  }*/
+
+
+}
+
+@media (max-width:556px){
+  #por-que-elegirme img {
+    height: 100px;
+    width: 100px;
   }
-
-
+  
+  #por-que-elegirme .icono {
+    width: 170px;
+    height: 170px;
+  }
+  
+  #por-que-elegirme .razones div .icono:hover {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 @media (max-width: 702px) {
