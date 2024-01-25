@@ -224,7 +224,7 @@ p {
   max-width: 100%;
   min-height: 110vh; /*disminutir aqui en el responsive*/
   background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)),
-    url("../assets/imagenes/habilidades.png");
+    url("../assets/imagenes/habilidades.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
