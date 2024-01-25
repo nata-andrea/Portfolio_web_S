@@ -146,14 +146,14 @@ sidebar li:first-child {
 /*------------HOME SECTION-----------------*/
 
 .inicio {
+  width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.5)),
-  url("../assets/imagenes/fondo_menu.png");
+  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.5)),url("../assets/imagenes/fondo_menu.png");
   /*background: url("../assets/imagenes/fondo_menu.jpg");*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   align-items: center;
   justify-content: center;
