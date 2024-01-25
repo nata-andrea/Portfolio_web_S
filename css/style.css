@@ -228,10 +228,11 @@ sidebar li:first-child {
   font-family: var(--letter-subtitulos);
   color: var(--color-subtitle);
   padding: 15px 0px 10px 0px;
+  white-space: normal;
 }
 #servicios p {
   text-align: justify;
-  white-space: wrap;
+  white-space: normal;
   color: var(--color-letter);
 }
 
@@ -456,7 +457,7 @@ sidebar li:first-child {
 
   .carrousel-item {
     width: 275px;
-    height: 280px;
+    height: 290px;
     margin-right: 14px;
   }
 
@@ -634,7 +635,7 @@ sidebar li:first-child {
   }
   .carrousel-item {
     width: 220px;
-    height: 330px;
+    height: 350px;
     margin-right: 15px;
   }
   .carrousel__container:hover .carrousel-item:hover {
