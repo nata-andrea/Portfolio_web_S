@@ -191,8 +191,12 @@ sidebar li:first-child {
 
 #servicios,
 #sobremi,
-#por-que-elegirme,#contacto {
+#por-que-elegirme {
   margin: 100px 100px; /*todas las secciones con el mismo margin poner aqui*/
+}
+
+#contacto {
+  margin-top: 100px;
 }
 
 .carrousel {
@@ -436,15 +440,48 @@ sidebar li:first-child {
 #contacto {
   max-width: 100%;
   min-height: 100vh; /*disminutir aqui en el responsive*/
-  background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)),
-    url("../assets/imagenes/habilidades.jpg");
+  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
+  url("../assets/imagenes/contacto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/*----contacto*/
+
+#contacto .opciones{
+  margin: 0px 100px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  
+  border-bottom:  1px solid var(--colo-menu);
+}
+
+.item-contacto{
+  
+  border-right:  1px solid var(--colo-menu);
+  border-left:  1px solid var(--colo-menu);
+  width: 250px;
+  height: 190px;
+  margin: 0 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: var(--colo-menu);
+}
+
+.item-contacto a{
+  color: var(--colo-menu);
 }
 
 /*RESPONSIVE media queries*/
@@ -598,10 +635,13 @@ sidebar li:first-child {
 
   #servicios,
   #sobremi,
-  #por-que-elegirme,#contacto {
+  #por-que-elegirme {
     margin: 70px 70px; /*todas las secciones con el mismo margin poner aqui*/
   }
 
+  #contacto {
+    margin-top: 70px; 
+  }
   .carrousel__container:hover .carrousel-item:hover {
     transform: scale(1.2);
   }
@@ -650,8 +690,11 @@ sidebar li:first-child {
   }
   #servicios,
   #sobremi,
-  #por-que-elegirme,#contacto {
+  #por-que-elegirme{
     margin: 70px 30px; /*todas las secciones con el mismo margin poner aqui*/
+  }
+  #contacto {
+    margin-top: 70px;
   }
   .carrousel-item {
     width: 220px;
