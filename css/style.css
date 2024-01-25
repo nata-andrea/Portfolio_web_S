@@ -568,8 +568,6 @@ sidebar li:first-child {
     font-size: 3.5rem;
   }
 
-  /*.inicio {
-    min-height: 30vh;}*/
 
   .inicio .content p {
     font-size: 3rem;
@@ -619,9 +617,6 @@ sidebar li:first-child {
 
 @media (max-width: 435px) {  /*poner pequeño*/
 
- .inicio{
-  min-height: 100vh;
- }
 
   .inicio .content h1 {
     font-size: 2rem;
