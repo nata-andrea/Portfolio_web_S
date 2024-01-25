@@ -588,6 +588,8 @@ sidebar li:first-child {
   #sobremi .wrapper {
     flex-flow: column;
   }
+ 
+  
   .foto-perfil {
     margin-right: 0px;
   }
@@ -635,7 +637,7 @@ sidebar li:first-child {
   }
   .carrousel-item {
     width: 220px;
-    height: 350px;
+    height: 365px;
     margin-right: 15px;
   }
   .carrousel__container:hover .carrousel-item:hover {
