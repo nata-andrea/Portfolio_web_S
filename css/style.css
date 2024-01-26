@@ -443,7 +443,7 @@ sidebar li:first-child {
 /*--------contacto-----------*/
 
 #contacto {
-  max-width: 100%;
+  background-image: url("../assets/imagenes/contacto.jpg");
   min-height: 100vh; /*disminutir aqui en el responsive*/
   background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
   url("../assets/imagenes/contacto.jpg");
@@ -472,6 +472,7 @@ sidebar li:first-child {
   border-left:  1px solid var(--colo-menu);
 }
 .item-contacto{
+  white-space: normal;
   border-right:  1px solid var(--colo-menu);
   width: 250px;
   height: 130px;
@@ -482,6 +483,11 @@ sidebar li:first-child {
   justify-content: space-between;
   margin-bottom: 10px;
   color: var(--colo-menu);
+}
+
+.item-contacto p{
+  font-family: var(--letter-textos);
+  font-size: 16px;
 }
 .item-contacto:hover{
   background-color: rgba(255, 255, 255, 0);
