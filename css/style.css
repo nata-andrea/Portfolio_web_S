@@ -19,7 +19,7 @@
   --color-title: rgba(248, 247, 246);
   --color-subtitle:rgba(248, 247, 246, 0.9) ;
   --color-subtitle2: rgba(248, 247, 246, 0.75);
-  --color-footer:rgba(10, 10, 10, 0.955);
+  --color-footer:rgba(44, 30, 73, 0.742);
   --color-letter: rgba(248, 247, 246, 0.8);
   --color-seccion: #86e7f8;
   --letter-titulos: "Roboto Condensed";
@@ -100,7 +100,7 @@ sidebar li:first-child {
   position: fixed;  /*estaba en fixed*/
   top: 0;
   right: 0;
-  height: 70vh;
+  height: 63vh;
   max-width: 70%;
   z-index: 999;
   background-color: rgba(255, 255, 255, 0);
@@ -314,6 +314,8 @@ sidebar li:first-child {
   width: 100%;
   margin-top: 70px;
 }
+
+
 .foto-perfil img {
   width: 20vw;
 }
@@ -395,6 +397,11 @@ sidebar li:first-child {
   width: 100%;
 }
 
+
+.razones div:hover {
+  transform: scale(1.1);
+ }
+
 .razones div {
   width: 200px;
   height: auto;
@@ -425,8 +432,7 @@ sidebar li:first-child {
 
 #por-que-elegirme .razones div .icono:hover {
   background: var(--colo-menu);
-  width: 130px;
-  height: 130px;
+ 
 }
 #por-que-elegirme .razones div:hover {
     color: var(--color-seccion);
@@ -436,7 +442,6 @@ sidebar li:first-child {
 
 /*--------contacto-----------*/
 
-/*---HABILIDADES---*/
 #contacto {
   max-width: 100%;
   min-height: 100vh; /*disminutir aqui en el responsive*/
@@ -449,10 +454,8 @@ sidebar li:first-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
-/*----contacto*/
 
 #contacto .opciones{
   margin: 0px 100px;
@@ -465,23 +468,41 @@ sidebar li:first-child {
   border-bottom:  1px solid var(--colo-menu);
 }
 
-.item-contacto{
-  
-  border-right:  1px solid var(--colo-menu);
+#item-contacto1{
   border-left:  1px solid var(--colo-menu);
+}
+.item-contacto{
+  border-right:  1px solid var(--colo-menu);
   width: 250px;
-  height: 190px;
+  height: 130px;
   margin: 0 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   margin-bottom: 10px;
   color: var(--colo-menu);
+}
+.item-contacto:hover{
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter:blur(10px);
 }
 
 .item-contacto a{
   color: var(--colo-menu);
+}
+
+
+
+/*footer*/
+
+footer {
+  background: var(--color-footer);
+}
+footer div {
+  position: relative;
+  margin: auto;
+  padding: 20px;
 }
 
 /*RESPONSIVE media queries*/
@@ -497,6 +518,20 @@ sidebar li:first-child {
   }
 }
 
+@media (max-width: 966px){
+  .item-contacto{
+    border:  1px solid var(--colo-menu);
+    margin: 10px 10px;
+    border-radius: 3%;
+    justify-content: center;
+    height: 200px;
+  }
+  
+  #contacto .opciones{
+    border-bottom: none;
+  }
+
+}
 
 
 @media (max-width: 868px) {
@@ -557,6 +592,9 @@ sidebar li:first-child {
   .frase {
     padding: 70px 80px 100px 80px;
   }
+  #contacto .opciones{
+    margin: 70px;
+    margin-top: 60px;}
 /*
   .razones {
     display: block;
@@ -602,14 +640,18 @@ sidebar li:first-child {
   }
   
   #por-que-elegirme .icono {
-    width: 170px;
-    height: 170px;
+    width: 140px;
+    height: 140px;
   }
   
   #por-que-elegirme .razones div .icono:hover {
-    width: 200px;
-    height: 200px;
+   
   }
+
+  .item-contacto{
+    width: 270px;
+  }
+
 }
 
 @media (max-width: 702px) {
@@ -639,9 +681,14 @@ sidebar li:first-child {
     margin: 70px 70px; /*todas las secciones con el mismo margin poner aqui*/
   }
 
+  #contacto .opciones{
+    margin: 40px;
+    margin-top: 60px;}
+
   #contacto {
     margin-top: 70px; 
   }
+ 
   .carrousel__container:hover .carrousel-item:hover {
     transform: scale(1.2);
   }
@@ -693,6 +740,23 @@ sidebar li:first-child {
   #por-que-elegirme{
     margin: 70px 30px; /*todas las secciones con el mismo margin poner aqui*/
   }
+
+
+  #por-que-elegirme img {
+    height: 70px;
+    width: 70px;
+  }
+  
+  #por-que-elegirme .icono {
+    width: 120px;
+    height: 120px;
+  }
+  
+  #por-que-elegirme .razones div .icono:hover {
+  
+  }
+
+
   #contacto {
     margin-top: 70px;
   }
@@ -710,4 +774,7 @@ sidebar li:first-child {
   .sidebar {
     width: 100%;
   }
+
+  .item-contacto{
+  width: 210px;}
 }
