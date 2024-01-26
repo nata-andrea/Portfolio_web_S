@@ -274,7 +274,7 @@ p {
   top: -1px;
 }
 .pr2{
-  animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+  animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards;
 }
 
 @keyframes animate {
@@ -403,7 +403,7 @@ h2 {
 
  
   .skills-container {
-    width: 70%;
+    width: 80%;
     /*margin-bottom: 50px;*/
   }
 
@@ -471,6 +471,6 @@ h2 {
 
 @media (max-width: 326px) {
 .skills-container {
-  width: 80%;
+  width: 90%;
   /*margin-bottom: 50px;*/
 }}

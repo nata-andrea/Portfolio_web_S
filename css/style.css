@@ -443,8 +443,8 @@ sidebar li:first-child {
 /*--------contacto-----------*/
 
 #contacto {
-  min-height: 110vh; /*disminutir aqui en el responsive*/
-  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.5)),
+  min-height: 100vh; /*disminutir aqui en el responsive*/
+  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
   url("../assets/imagenes/contacto2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -454,7 +454,7 @@ sidebar li:first-child {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 100px;
+ 
 }
 
 #contacto .opciones{
@@ -482,13 +482,13 @@ sidebar li:first-child {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: var(--colo-menu);
 }
 
 .item-contacto p{
   font-family: var(--letter-textos);
-  font-size: 16px;
+  font-size: var(--size-subtitle2);
   white-space: normal;
+  
 }
 .item-contacto:hover{
   background-color: rgba(255, 255, 255, 0);
@@ -496,7 +496,15 @@ sidebar li:first-child {
 }
 
 .item-contacto a{
+  font-size: var(--size-letter);
+  
+ 
+}
+.con_titulo{
   color: var(--colo-menu);
+}
+.correo, .telefono{
+  color: var(--color-subtitle);
 }
 
 
@@ -518,15 +526,13 @@ footer div {
   
   main {
     margin: 0 auto;
- 
-    
   }
 
   #servicios,
   #sobremi,
   #por-que-elegirme {
   max-width: 1340px; /*todas las secciones con el mismo margin poner aqui*/
-  margin: 0 auto;
+  margin: 100px auto;
 }
   
 }
@@ -646,24 +652,8 @@ footer div {
 
 }
 
-@media (max-width:556px){
-  #por-que-elegirme img {
-    height: 100px;
-    width: 100px;
-  }
-  
-  #por-que-elegirme .icono {
-    width: 140px;
-    height: 140px;
-  }
-  
 
 
-  .item-contacto{
-    width: 270px;
-  }
-
-}
 
 @media (max-width: 702px) {
   .hideOnMobile {
@@ -738,6 +728,40 @@ footer div {
 
 }
 
+@media (max-width:556px){
+  #por-que-elegirme img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  #por-que-elegirme .icono {
+    width: 140px;
+    height: 140px;
+  }
+  
+
+
+  .item-contacto{
+    width: 270px;
+  }
+
+}
+@media (max-width:636px){
+  .item-contacto{
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-radius: 0;
+  }
+  #item-contacto1{
+    border-left:  none;
+  }
+
+  #item-contacto1{
+    border-top: none;
+  }
+}
+
 @media (max-width: 435px) {  /*poner pequeño*/
 
 
@@ -752,6 +776,13 @@ footer div {
   #sobremi,
   #por-que-elegirme{
     margin: 70px 30px; /*todas las secciones con el mismo margin poner aqui*/
+  }
+
+  #servicios p {
+    text-align: left;
+  }
+  .perfil p{
+    text-align: center;
   }
   #por-que-elegirme {
     margin-bottom: 0px;
@@ -771,8 +802,8 @@ footer div {
 
   
   .carrousel-item {
-    width: 220px;
-    height: 365px;
+    width: 200px;
+    height: 385px;
     margin-right: 15px;
   }
   .carrousel-item:hover ~ .carrousel-item {
