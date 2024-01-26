@@ -226,7 +226,6 @@ p {
 /*---HABILIDADES---*/
 #habilidades {
   /*max-width: 100%;*/
-  background-image: url("../assets/imagenes/habilidades.jpg");
   min-height: 100vh; /*disminutir aqui en el responsive*/
   background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)),
     url("../assets/imagenes/habilidades.jpg");

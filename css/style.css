@@ -444,7 +444,7 @@ sidebar li:first-child {
 
 #contacto {
   min-height: 100vh; /*disminutir aqui en el responsive*/
-  background-image: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
+  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
   url("../assets/imagenes/contacto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
