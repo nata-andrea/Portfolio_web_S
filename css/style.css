@@ -154,7 +154,7 @@ sidebar li:first-child {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -443,19 +443,18 @@ sidebar li:first-child {
 /*--------contacto-----------*/
 
 #contacto {
-  background-image: url("../assets/imagenes/contacto.jpg");
   min-height: 100vh; /*disminutir aqui en el responsive*/
-  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
+  background-image: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
   url("../assets/imagenes/contacto.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-
 
 #contacto .opciones{
   margin: 0px 100px;
@@ -464,7 +463,7 @@ sidebar li:first-child {
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
-  
+  position: relative;
   border-bottom:  1px solid var(--colo-menu);
 }
 
@@ -472,7 +471,7 @@ sidebar li:first-child {
   border-left:  1px solid var(--colo-menu);
 }
 .item-contacto{
-  white-space: normal;
+  
   border-right:  1px solid var(--colo-menu);
   width: 250px;
   height: 130px;
@@ -488,6 +487,7 @@ sidebar li:first-child {
 .item-contacto p{
   font-family: var(--letter-textos);
   font-size: 16px;
+  white-space: normal;
 }
 .item-contacto:hover{
   background-color: rgba(255, 255, 255, 0);
@@ -514,14 +514,20 @@ footer div {
 /*RESPONSIVE media queries*/
 
 @media (min-width: 1440px) {
+  
   main {
     margin: 0 auto;
-    max-width: 1440px; /*cambiar el header*/
+ 
+    
   }
-  nav,
-  header {
-    max-width: 1440px;
-  }
+
+  #servicios,
+  #sobremi,
+  #por-que-elegirme {
+  max-width: 1340px; /*todas las secciones con el mismo margin poner aqui*/
+  margin: 0 auto;
+}
+  
 }
 
 @media (max-width: 966px){
@@ -650,9 +656,7 @@ footer div {
     height: 140px;
   }
   
-  #por-que-elegirme .razones div .icono:hover {
-   
-  }
+
 
   .item-contacto{
     width: 270px;
@@ -758,10 +762,6 @@ footer div {
     height: 120px;
   }
   
-  #por-que-elegirme .razones div .icono:hover {
-  
-  }
-
 
   #contacto {
     margin-top: 70px;
@@ -770,6 +770,14 @@ footer div {
     width: 220px;
     height: 365px;
     margin-right: 15px;
+  }
+  .carrousel-item:hover ~ .carrousel-item {
+    transform: translate3d(0, 0, 0);
+    /*los elementos se transladan a la derecha, justo la mitad del tamaño del scale*/
+  }
+  .carrousel__container:hover .carrousel-item {
+    opacity: 1;
+    /* al hacerle hover opaco todos */
   }
   .carrousel__container:hover .carrousel-item:hover {
     transform: scale(1);
@@ -782,5 +790,5 @@ footer div {
   }
 
   .item-contacto{
-  width: 210px;}
+  width: 230px;}
 }
