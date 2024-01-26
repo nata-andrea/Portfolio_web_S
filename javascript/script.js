@@ -1,17 +1,4 @@
-function carga_imagen_previamente(){
-    document.addEventListener("DOMContentLoaded", function() {
-        var contacto = document.getElementById("contacto");
-        var img = new Image();
-        img.src = "./assets/imagenes/contacto.jpg";
 
-        // Añadir un evento de carga para establecer la imagen de fondo después de cargar la imagen
-        img.onload = function() {
-            contacto.style.background = "linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)), url('" + img.src + "')";
-            contacto.style.backgroundSize = "cover"; // Agrega esta línea para asegurarte de que se aplique el tamaño de la imagen
-            contacto.style.backgroundRepeat = "no-repeat";
-            contacto.style.backgroundPosition = "center center";
-        };});
-}
 
 function showSidebar(){
     const sidebar=document.querySelector('.sidebar')
@@ -72,6 +59,7 @@ function transicion(){
                 // Obtiene el ID de la sección desde el href del enlace
                 var objetivoId = this.getAttribute('href').substring(1);
                 var objetivo = document.getElementById(objetivoId);
+
     
                 // Calcula la posición de desplazamiento ajustada
                 var posicionAjustada = objetivo.offsetTop - distanciaDesdeArriba;

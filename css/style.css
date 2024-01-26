@@ -194,10 +194,10 @@ sidebar li:first-child {
 #por-que-elegirme {
   margin: 100px 100px; /*todas las secciones con el mismo margin poner aqui*/
 }
-
-#contacto {
-  margin-top: 100px;
+#por-que-elegirme {
+  margin-bottom: 0px;
 }
+
 
 .carrousel {
   width: 100%;
@@ -443,17 +443,18 @@ sidebar li:first-child {
 /*--------contacto-----------*/
 
 #contacto {
-  min-height: 100vh; /*disminutir aqui en el responsive*/
-  /*background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.6)),
-  url("../assets/imagenes/contacto.jpg");
+  min-height: 110vh; /*disminutir aqui en el responsive*/
+  background: linear-gradient(to left, rgba(19, 37, 72, 0.706), rgba(75, 107, 183, 0.5)),
+  url("../assets/imagenes/contacto2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;*/
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  padding-top: 100px;
 }
 
 #contacto .opciones{
@@ -691,13 +692,15 @@ footer div {
     margin: 70px 70px; /*todas las secciones con el mismo margin poner aqui*/
   }
 
+  #por-que-elegirme {
+    margin-bottom: 0px;
+  }
+
   #contacto .opciones{
     margin: 40px;
     margin-top: 60px;}
 
-  #contacto {
-    margin-top: 70px; 
-  }
+ 
  
   .carrousel__container:hover .carrousel-item:hover {
     transform: scale(1.2);
@@ -750,6 +753,9 @@ footer div {
   #por-que-elegirme{
     margin: 70px 30px; /*todas las secciones con el mismo margin poner aqui*/
   }
+  #por-que-elegirme {
+    margin-bottom: 0px;
+  }
 
 
   #por-que-elegirme img {
@@ -763,9 +769,7 @@ footer div {
   }
   
 
-  #contacto {
-    margin-top: 70px;
-  }
+  
   .carrousel-item {
     width: 220px;
     height: 365px;
