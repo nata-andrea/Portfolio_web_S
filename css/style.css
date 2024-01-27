@@ -215,7 +215,7 @@ url("../assets/imagenes/fondo_menu.jpg");
   -moz-background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,6 +443,7 @@ url("../assets/imagenes/fondo_menu.jpg");
   color: #2d4886;
   font-size: 0.9rem;
   margin: auto;
+  background: var(--colo-menu);
   font-weight: bold;
 }
 
