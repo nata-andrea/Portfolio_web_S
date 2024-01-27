@@ -74,6 +74,7 @@ nav {
 .bar {
   background-color: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
@@ -123,6 +124,7 @@ sidebar li:first-child {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -641,6 +643,7 @@ sidebar li:first-child {
 .item-contacto:hover {
   background-color: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
