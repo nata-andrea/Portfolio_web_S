@@ -124,7 +124,7 @@ sidebar li:first-child {
   z-index: 999;
   background-color: rgba(255, 255, 255, 0);
   -webkit-backdrop-filter: blur(10px);
-  /*-moz-backdrop-filter: blur(10px);*/
+  -moz-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -197,12 +197,10 @@ sidebar li:first-child {
 
 .inicio {
   min-height: 100vh;
-  background: -webkit-gradient(linear,
-      right top,
-      left top,
-      from(rgba(19, 37, 72, 0.706)),
-      to(rgba(75, 107, 183, 0.5))),
-    url("../assets/imagenes/fondo_menu.jpg");
+  background: -webkit-linear-gradient(to left,
+  rgba(19, 37, 72, 0.706),
+  rgba(75, 107, 183, 0.5)),
+url("../assets/imagenes/fondo_menu.jpg");
   background: -o-linear-gradient(right,
       rgba(19, 37, 72, 0.706),
       rgba(75, 107, 183, 0.5)),
