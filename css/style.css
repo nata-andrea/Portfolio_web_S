@@ -78,6 +78,12 @@ nav {
   backdrop-filter: blur(10px);
 }
 
+@-moz-document url-prefix() {
+  .bar{
+    background-color: rgb(62, 89, 152);
+  }
+}
+
 nav li {
   height: 64px;
 }
@@ -113,6 +119,8 @@ nav a:hover {
 sidebar li:first-child {
   margin-right: auto;
 }
+
+
 
 .sidebar {
   position: fixed;
@@ -159,6 +167,15 @@ sidebar li:first-child {
     transform: translateX(-20%) translateY(22%) scale(1) translateZ(0);
     opacity: 1;
   }
+}
+
+@-moz-document url-prefix() {
+  .sidebar{
+    background-color: rgb(62, 89, 152);
+  }
+ .bar{
+  background-color: rgb(62, 89, 152);
+ }
 }
 
 @keyframes zoomIn {
@@ -803,7 +820,7 @@ footer div {
   .hideOnMobile {
     display: none;
   }
-
+ 
   .menu-button {
     display: block;
   }
@@ -843,6 +860,8 @@ footer div {
     -ms-transform: scale(1.2);
     transform: scale(1.2);
   }
+
+  /*si es para safari*/
 
   #sobremi .wrapper {
     -webkit-box-orient: vertical;
