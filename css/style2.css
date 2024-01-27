@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -9,30 +8,29 @@
   outline: 0;
   text-decoration: none;
   list-style: none;
+  -webkit-box-sizing: border-box; /* Prefijo para WebKit (Chrome, Safari) */
+  -moz-box-sizing: border-box; /* Prefijo para Firefox */
   box-sizing: border-box;
+  -o-box-sizing: border-box;
   /*text-transform: capitalize*/
 }
 
 :root {
-  --color-fondo: linear-gradient(to left, #182848, #4b6cb7) no-repeat;
+  --color-fondo: -webkit-linear-gradient(to left, #182848, #4b6cb7); /* Prefijo para WebKit (Chrome, Safari) */
+  --color-fondo: linear-gradient(to left, #182848, #4b6cb7); 
   --colo-menu: rgb(248, 247, 246);
   --color-title: rgba(248, 247, 246);
-  --color-subtitle:rgba(248, 247, 246, 0.9) ;
+  --color-subtitle: rgba(248, 247, 246, 0.9);
   --color-subtitle2: rgba(248, 247, 246, 0.7);
-  --color-footer:rgba(44, 30, 73, 0.742);
+  --color-footer: rgba(44, 30, 73, 0.742);
   --color-letter: rgba(248, 247, 246, 0.8);
   --color-seccion: #86e7f8;
   --letter-titulos: "Roboto Condensed";
   --letter-subtitulos: "Lora";
   --letter-textos: "Times";
   --color-line: #faf6f6;
-  --color-gradient-circular: conic-gradient(#86e7f8 3.6deg, #faf9f8 0deg);
-  /*    --size-title: 2.5vw;
-  --size-subtitle: 2vw;
-  --size-subtitle2: 1.5vw;
-  --size-letter: 1.3vw;
-  */
-
+  --color-gradient-circular: -webkit-conic-gradient(#86e7f8 3.6deg, #faf9f8 0deg); /* Prefijo para WebKit (Chrome, Safari) */
+  --color-gradient-circular: conic-gradient(#86e7f8 3.6deg, #faf9f8 0deg); 
   --size-title: 4rem;
   --size-subtitle: 24px;
   --size-subtitle2: 19px;
@@ -40,7 +38,7 @@
 }
 
 ::selection {
-  background:var(--colo-menu);
+  background: var(--colo-menu);
   color: var(--color-footer);
 }
 
@@ -57,14 +55,16 @@
 
 #Experiencia,
 #educacion {
-  margin: 150px 230px; /*cambiar el margin en el responsive*/
+  margin: 150px 230px; /* Cambiar el margin en el responsive */
 }
+
 #Experiencia {
   margin-top: 20px;
 }
+
 h1 {
   font-family: var(--letter-titulos);
-  font-size: var(--size-title); /*el tamaño cambia con la pantalla usar vw*/
+  font-size: var(--size-title); /* El tamaño cambia con la pantalla usar vw */
   color: var(--color-title);
 }
 
@@ -79,11 +79,13 @@ h3 {
   font-size: var(--size-subtitle2);
   color: var(--color-subtitle2);
 }
+
 p {
   font-family: var(--letter-textos);
   font-size: var(--size-letter);
   color: var(--color-letter);
 }
+
 .title {
   position: relative;
   text-align: center;
@@ -96,12 +98,79 @@ p {
   align-items: center;
 }
 
+/* Prefijos para compatibilidad con Safari */
+@supports (-webkit-appearance: none) {
+  ::selection {
+      background: var(--colo-menu);
+      color: var(--color-footer);
+  }
+
+  .color {
+      background: -webkit-var(--color-fondo);
+      background: var(--color-fondo);
+  }
+
+  #volver,
+  #Experiencia,
+  #habilidades {
+      margin-top: 50px;
+      position: relative;
+  }
+
+  #Experiencia,
+  #educacion {
+      margin: 150px 230px; /* Cambiar el margin en el responsive */
+  }
+
+  #Experiencia {
+      margin-top: 20px;
+  }
+
+  h1 {
+      font-family: var(--letter-titulos);
+      font-size: var(--size-title); /* El tamaño cambia con la pantalla usar vw */
+      color: var(--color-title);
+  }
+
+  h2 {
+      font-family: var(--letter-subtitulos);
+      font-size: var(--size-subtitle);
+      color: var(--color-subtitle);
+  }
+
+  h3 {
+      font-family: var(--letter-subtitulos);
+      font-size: var(--size-subtitle2);
+      color: var(--color-subtitle2);
+  }
+
+  p {
+      font-family: var(--letter-textos);
+      font-size: var(--size-letter);
+      color: var(--color-letter);
+  }
+
+  .title {
+      position: relative;
+      text-align: center;
+      letter-spacing: 2px;
+  }
+
+  #volver {
+      margin: 60px 230px 30px 220px;
+      display: flex;
+      align-items: center;
+  }
+}
+
+  
 /*-------SECTION VOLVER*/
 
 #volver div {
   position: relative;
   padding-right: 10px;
 }
+
 #volver div a {
   cursor: pointer;
   color: var(--color-line);
@@ -112,20 +181,70 @@ p {
   color: var(--color-seccion);
   font-size: 18px;
 }
-#volver svg{
-  width:50px;
-  height:50px
+
+#volver svg {
+  width: 50px;
+  height: 50px;
 }
 
 #volver svg:hover {
   transform: scale(1.1);
 }
+
+/* Prefijos para compatibilidad con Safari */
+@supports (-webkit-appearance: none) {
+  #volver div a {
+      cursor: pointer;
+      color: var(--color-line);
+      font-size: var(--size-letter);
+      -webkit-transition: color 0.3s, font-size 0.3s; /* Prefijo para WebKit (Safari) */
+      transition: color 0.3s, font-size 0.3s;
+  }
+
+  #volver div a:hover {
+      color: var(--color-seccion);
+      font-size: 18px;
+      -webkit-transition: color 0.3s, font-size 0.3s; /* Prefijo para WebKit (Safari) */
+      transition: color 0.3s, font-size 0.3s;
+  }
+
+  #volver svg:hover {
+      -webkit-transform: scale(1.1); /* Prefijo para WebKit (Safari) */
+      transform: scale(1.1);
+  }
+}
+/* Prefijos para propiedades de animación en WebKit (Safari) */
+@-webkit-keyframes __show {
+  0% {
+    -webkit-transform: translateY(300px);
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes __hide {
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(300px);
+    opacity: 0;
+  }
+}
+
 /*-----------SECTION EXPERIENCIA AND SECTION EDUCATION-------------*/
 
 #timelines,
 #timelines2 {
   position: relative;
 }
+
 #timelines::before,
 #timelines2::before {
   content: "";
@@ -135,6 +254,7 @@ p {
   height: 100%;
   background: var(--color-line);
 }
+
 #progress-bar,
 #progress-bar2 {
   position: absolute;
@@ -176,7 +296,7 @@ p {
   width: 10px;
   border-radius: 50%;
   border: 1px solid var(--color-letter);
-  background-color:var(--colo-menu);
+  background-color: var(--colo-menu);
 }
 
 .content,
@@ -186,7 +306,7 @@ p {
   padding-left: 60px;
   color: var(--color-letter);
   position: relative;
-  /*width: 100%; posiblemente lo use en resonsive*/
+  /*width: 100%; posiblemente lo use en responsive*/
   text-align: justify;
   margin: auto;
 }
@@ -223,26 +343,40 @@ p {
   }
 }
 
-/*---HABILIDADES---*/
+/* Prefijos para la sección de habilidades */
 #habilidades {
   /*max-width: 100%;*/
-  min-height: 100vh; /*disminutir aqui en el responsive*/
-  background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)),
-    url("../assets/imagenes/habilidades2.jpg");
+  min-height: 100vh; /*disminuir aquí en el responsive*/
+  background: -webkit-linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)); /* Prefijo para WebKit (Chrome, Safari) */
+  background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)), url("../assets/imagenes/habilidades2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: -webkit-flex; /* Prefijo para WebKit (Chrome, Safari) */
   display: flex;
+  -webkit-flex-direction: column; /* Prefijo para WebKit (Chrome, Safari) */
   flex-direction: column;
+  -webkit-justify-content: space-between; /* Prefijo para WebKit (Chrome, Safari) */
   justify-content: space-between;
+  -webkit-align-items: center; /* Prefijo para WebKit (Chrome, Safari) */
   align-items: center;
 }
+
+/* Prefijo para WebKit (Chrome, Safari) */
+@-webkit-keyframes animate {
+  100% {
+      width: 100%;
+  }
+}
+
+/*---HABILIDADES---*/
 .subject {
   font-family: var(--letter-subtitulos);
   color: var(--color-subtitle);
-  font-size: 19px /*var(--size-subtitle2)*/;
+  font-size: 19px; /* var(--size-subtitle2); */
   padding: 5px 0px;
 }
+
 .skills-container {
   width: 50%;
   margin: auto;
@@ -257,14 +391,16 @@ p {
   border-radius: 15px;
   margin-bottom: 20px;
 }
+
 .progress-bar::after {
   position: absolute;
   content: attr(value);
   top: -35px;
   right: 0;
-  color:var(--color-seccion);
+  color: var(--color-seccion);
   font-size: 18px;
 }
+
 .progress-line {
   position: absolute;
   width: 0%;
@@ -273,14 +409,10 @@ p {
   border-radius: 15px;
   top: -1px;
 }
-.pr2{
-  animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards;
-}
 
-@keyframes animate {
-  100% {
-    width: 100%;
-  }
+.pr2 {
+  -webkit-animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards; /* Prefijo para WebKit (Chrome, Safari) */
+  animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards;
 }
 
 .progress-line::after {
@@ -291,10 +423,10 @@ p {
   border-radius: 50%;
   top: 50%;
   left: 100%;
+  -webkit-transform: translate(-50%, -50%); /* Prefijo para WebKit (Chrome, Safari) */
   transform: translate(-50%, -50%);
   background-color: var(--color-seccion);
 }
-
 
 #habilidades .title {
   bottom: 120px;
@@ -303,6 +435,242 @@ p {
 footer {
   background: var(--color-footer);
 }
+
+footer div {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: left;
+}
+/* Prefijos para compatibilidad con Safari */
+
+/* Prefijo para WebKit (Chrome, Safari) */
+@supports (-webkit-appearance: none) {
+  /*-----------SECTION EXPERIENCIA AND SECTION EDUCATION-------------*/
+  #timelines,
+  #timelines2 {
+      position: relative;
+  }
+
+  #timelines::before,
+  #timelines2::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      left: 0;
+      height: 100%;
+      background: var(--color-line);
+  }
+
+  #progress-bar,
+  #progress-bar2 {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 3px;
+      height: 100%; /*modificar 100%*/
+      background: var(--color-seccion);
+  }
+
+  .child,
+  .child2 {
+      position: relative;
+      margin: 60px;
+      text-align: justify;
+      opacity: 1; /*Cambiar aqui a 0*/
+      margin-right: 0px;
+  }
+
+  .circular-progress,
+  .circular-progress2 {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      background: var(--color-seccion);
+      left: -74px;
+      display: flex;
+      align-items: center;
+      /*background: var(--color-gradient-circular);*/
+      justify-content: center;
+  }
+
+  .circular-progress::before,
+  .circular-progress2::before {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      border: 1px solid var(--color-letter);
+      background-color: var(--colo-menu);
+  }
+
+  .content,
+  .content2 {
+      width: 100%;
+      padding: 0px;
+      padding-left: 60px;
+      color: var(--color-letter);
+      position: relative;
+      /*width: 100%; posiblemente lo use en responsive*/
+      text-align: justify;
+      margin: auto;
+  }
+
+  /*Para animar el child*/
+  ._show {
+      opacity: 1;
+      animation: __show 0.5s cubic-bezier(0.99, -0.7, 0.2, 1.9);
+  }
+  ._hide {
+      opacity: 0;
+      animation: __hide 0.5s cubic-bezier(0.99, -0.7, 0.2, 1.9);
+  }
+
+  @keyframes __show {
+      0% {
+          transform: translateY(300px);
+          opacity: 0;
+      }
+      100% {
+          transform: translateY(0px);
+          opacity: 1;
+      }
+  }
+
+  @keyframes __hide {
+      0% {
+          transform: translateY(0);
+          opacity: 1;
+      }
+      100% {
+          transform: translateY(300px);
+          opacity: 0;
+      }
+  }
+
+  /* Prefijos para propiedades de animación */
+  @-webkit-keyframes __show {
+      0% {
+          -webkit-transform: translateY(300px);
+          transform: translateY(300px);
+          opacity: 0;
+      }
+      100% {
+          -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+          opacity: 1;
+      }
+  }
+
+  @-webkit-keyframes __hide {
+      0% {
+          -webkit-transform: translateY(0);
+          opacity: 1;
+      }
+      100% {
+          -webkit-transform: translateY(300px);
+          opacity: 0;
+      }
+  }
+}
+
+/*---HABILIDADES---*/
+#habilidades {
+  /*max-width: 100%;*/
+  min-height: 100vh; /*disminuir aquí en el responsive*/
+  background: -webkit-linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)); /* Prefijo para WebKit (Chrome, Safari) */
+  background: linear-gradient(to left, #182848b4, rgba(75, 107, 183, 0.8)), url("../assets/imagenes/habilidades2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-flex; /* Prefijo para WebKit (Chrome, Safari) */
+  display: flex;
+  -webkit-flex-direction: column; /* Prefijo para WebKit (Chrome, Safari) */
+  flex-direction: column;
+  -webkit-justify-content: space-between; /* Prefijo para WebKit (Chrome, Safari) */
+  justify-content: space-between;
+  -webkit-align-items: center; /* Prefijo para WebKit (Chrome, Safari) */
+  align-items: center;
+}
+
+/* Prefijo para WebKit (Chrome, Safari) */
+@-webkit-keyframes animate {
+  100% {
+      width: 100%;
+  }
+}
+
+.subject {
+  font-family: var(--letter-subtitulos);
+  color: var(--color-subtitle);
+  font-size: 19px; /* var(--size-subtitle2); */
+  padding: 5px 0px;
+}
+
+.skills-container {
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background-color: var(--color-line);
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.progress-bar::after {
+  position: absolute;
+  content: attr(value);
+  top: -35px;
+  right: 0;
+  color: var(--color-seccion);
+  font-size: 18px;
+}
+
+.progress-line {
+  position: absolute;
+  width: 0%;
+  height: 7px;
+  background-color: var(--color-seccion);
+  border-radius: 15px;
+  top: -1px;
+}
+
+.pr2 {
+  -webkit-animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards; /* Prefijo para WebKit (Chrome, Safari) */
+  animation: animate 3s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+
+.progress-line::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  top: 50%;
+  left: 100%;
+  -webkit-transform: translate(-50%, -50%); /* Prefijo para WebKit (Chrome, Safari) */
+  transform: translate(-50%, -50%);
+  background-color: var(--color-seccion);
+}
+
+#habilidades .title {
+  bottom: 120px;
+}
+
+footer {
+  background: var(--color-footer);
+}
+
 footer div {
   position: relative;
   margin: auto;
@@ -316,161 +684,164 @@ h2 {
 /*----------------Responsive-----------*/
 @media (min-width: 1440px) {
   main {
-    margin: 0 auto;
+      margin: 0 auto;
   }
 
   #Experiencia, #educacion {
-    max-width: 1210px;
-    margin: 0 auto;
+      max-width: 1210px;
+      margin: 0 auto;
   }
 }
 
 @media (max-width: 1126px) {
   #Experiencia,
   #educacion {
-    /*cambiar el margin en el responsive*/
-    margin: 150px 150px;
+      margin: 150px 150px; /* Cambiado el margin en el responsive */
   }
 
   #Experiencia {
-    margin-top: 60px;
+      margin-top: 60px;
   }
+
   #volver {
-    margin-left: 140px;
+      margin-left: 140px;
   }
+
   .subject {
-    font-size: 16px;
+      font-size: 16px;
   }
 }
 
 @media (max-width: 868px) {
   #Experiencia,
   #educacion {
-    /*cambiar el margin en el responsive*/
-    margin: 150px 90px;
+      margin: 150px 90px; /* Cambiado el margin en el responsive */
   }
+
   #Experiencia {
-    margin-top: 60px;
+      margin-top: 60px;
   }
+
   #volver {
-    margin-left: 80px;
+      margin-left: 80px;
   }
+
   #habilidades {
-    min-height: 100vh;
-    /*margin-top: 0px;*/
+      min-height: 100vh;
   }
 
   #habilidades .title {
-    bottom: 80px;
+      bottom: 80px;
   }
+
   .subject {
-    font-size: 14px;
+      font-size: 14px;
   }
 }
 
 @media (max-width: 702px) {
   #Experiencia,
   #educacion {
-    /*cambiar el margin en el responsive*/
-    margin: 150px 70px;
+      margin: 150px 70px; /* Cambiado el margin en el responsive */
   }
+
   #Experiencia {
-    margin-top: 60px;
+      margin-top: 60px;
   }
+
   #volver {
-    margin-left: 60px;
+      margin-left: 60px;
   }
 
   .content,
   .content2 {
-    padding-left: 0px;
+      padding-left: 0px;
   }
 
   h1 {
-    font-size: 3rem;
+      font-size: 3rem;
   }
 
   h2 {
-    font-size: 20px;
+      font-size: 20px;
   }
 
   h3 {
-    font-size: 15px;
-  }
-  p {
-    font-size: 13px;
+      font-size: 15px;
   }
 
- 
+  p {
+      font-size: 13px;
+  }
+
   .skills-container {
-    width: 80%;
-    /*margin-bottom: 50px;*/
+      width: 80%;
   }
 
   #habilidades .title {
-    bottom: 60px;
+      bottom: 60px;
   }
+
   #educacion {
-    margin-bottom: 90px;
+      margin-bottom: 90px;
   }
+
   .subject {
-    font-size: 12px;
+      font-size: 12px;
   }
 }
+
 @media (max-width: 435px) {
   #Experiencia,
   #educacion {
-    /*cambiar el margin en el responsive*/
-    margin: 150px 30px;
+      margin: 150px 30px; /* Cambiado el margin en el responsive */
   }
+
   #Experiencia {
-    margin-top: 60px;
+      margin-top: 60px;
   }
 
   h1 {
-    font-size: 2rem;
+      font-size: 2rem;
   }
 
   h2 {
-    font-size: 17px;
+      font-size: 17px;
   }
 
   h3 {
-    font-size: 12px;
+      font-size: 12px;
   }
+
   p {
-    font-size: 12px;
+      font-size: 12px;
   }
+
   #volver {
-    margin: 30px 30px;
+      margin: 30px 30px;
   }
+
   #Experiencia {
-    margin-bottom: 80px;
+      margin-bottom: 80px;
   }
+
   #educacion {
-    margin-bottom: 50px;
+      margin-bottom: 50px;
   }
+
   #Experiencia,
   #educacion {
-    margin-top: 40px;
+      margin-top: 40px;
   }
+
   #volver div a {
-    font-size: 12px;
+      font-size: 12px;
   }
-
- 
-
- 
-
-  /*#educacion {
-    margin-bottom: 50px;
-  }*/
 }
 
-/*el minimo es 280*/
-
+/* El mínimo es 280 */
 @media (max-width: 326px) {
-.skills-container {
-  width: 90%;
-  /*margin-bottom: 50px;*/
-}}
+  .skills-container {
+      width: 90%;
+  }
+}
