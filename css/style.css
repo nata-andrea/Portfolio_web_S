@@ -215,7 +215,7 @@ url("../assets/imagenes/fondo_menu.jpg");
   -moz-background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  
+  /*background-attachment: fixed;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +272,7 @@ url("../assets/imagenes/fondo_menu.jpg");
   overflow-y: hidden;
   position: relative;
   border: none;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS Safari */
 }
 
 .title {
@@ -288,27 +289,28 @@ url("../assets/imagenes/fondo_menu.jpg");
   margin: 70px 0px;
   /* padding-bottom: 10px; */
 }
-
 #servicios span {
   display: inline-block;
   width: 50px;
-  /* Ancho deseado del span */
   height: 50px;
-  /* Altura deseada del span */
   padding: 0px;
   margin: 0px;
-}
 
+  /* Prefijos para compatibilidad con navegadores más antiguos y Safari */
+  -webkit-box-sizing: border-box; /* Safari, older versions of Chrome/Opera */
+  -moz-box-sizing: border-box; /* Firefox, older versions of Opera */
+  box-sizing: border-box; /* Standard syntax */
+}
 /* Estilo para la imagen dentro del span */
 #servicios img {
   width: 100%;
-  /* Hacer que la imagen ocupe el 100% del ancho del span */
   height: 100%;
-  /* Hacer que la imagen ocupe el 100% de la altura del span */
-  -o-object-fit: cover;
+  -o-object-fit: cover; /* Para Opera */
   object-fit: cover;
-  /* Ajustar la imagen al contenedor sin distorsionarla */
+  -webkit-object-fit: cover; /* Para Safari */
+  -moz-object-fit: cover; /* Para versiones antiguas de Firefox */
 }
+
 
 #servicios h3 {
   font-family: var(--letter-subtitulos);
@@ -329,10 +331,8 @@ url("../assets/imagenes/fondo_menu.jpg");
   border-radius: 15px;
   border: var(--colo-menu) solid 1px;
   overflow: hidden;
-  /* esconda lo que sobra en el radio */
   margin-right: 15px;
   display: inline-block;
-  /*los elementos no tengan ese espacio hacia abajo */
   cursor: pointer;
   -webkit-transition: 450ms all;
   -o-transition: 450ms all;
@@ -340,18 +340,24 @@ url("../assets/imagenes/fondo_menu.jpg");
   -webkit-transform-origin: center left;
   -ms-transform-origin: center left;
   transform-origin: center left;
-  /* se queda en el centro, que vaya de izq a der */
   position: relative;
   padding: 30px;
   font-family: var(--letter-textos);
   font-size: 0.9rem;
+
+  /* Prefijos para mejorar compatibilidad con Safari */
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-box-sizing: border-box; /* Safari, older versions of Chrome/Opera */
+  -moz-box-sizing: border-box; /* Firefox, older versions of Opera */
 }
 
 .carrousel-item:hover~.carrousel-item {
   -webkit-transform: translate3d(100px, 0, 0);
+  -ms-transform: translate3d(100px, 0, 0); /* Prefijo para Internet Explorer */
   transform: translate3d(100px, 0, 0);
-  /*los elementos se transladan a la derecha, justo la mitad del tamaño del scale*/
 }
+
 
 .carrousel__container:hover .carrousel-item {
   opacity: 0.3;
@@ -974,6 +980,7 @@ footer div {
 
   .carrousel-item:hover~.carrousel-item {
     -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0); /* Prefijo para Internet Explorer */
     transform: translate3d(0, 0, 0);
     /*los elementos se transladan a la derecha, justo la mitad del tamaño del scale*/
   }
