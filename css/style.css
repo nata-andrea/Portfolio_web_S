@@ -661,6 +661,7 @@ url("../assets/imagenes/fondo_menu.jpg");
 .correo,
 .telefono {
   color: var(--color-subtitle);
+  font-size: 15px;
 }
 
 /*footer*/
