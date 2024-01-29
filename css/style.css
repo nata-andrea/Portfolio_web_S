@@ -673,8 +673,22 @@ footer {
 footer div {
   position: relative;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
+  width: 100%;
 }
+footer div p{
+  color: var(--colo-menu);
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--letter-textos);
+}
+
+.img-icon{
+  color: var(--colo-menu);
+  text-decoration: underline;
+}
+
 
 /*RESPONSIVE media queries*/
 
@@ -822,6 +836,10 @@ footer div {
 @media (max-width: 702px) {
   .hideOnMobile {
     display: none;
+  }
+
+  footer div p{
+    font-size: 10px;
   }
  
   .menu-button {
@@ -1005,5 +1023,9 @@ footer div {
 
   .item-contacto {
     width: 255px;
+  }
+
+  footer div p{
+    font-size: 5px;
   }
 }

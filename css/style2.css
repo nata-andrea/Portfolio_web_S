@@ -343,7 +343,7 @@ p {
   }
 }
 
-/* Prefijos para la sección de habilidades */
+/*---HABILIDADES---*/
 #habilidades {
   /*max-width: 100%;*/
   min-height: 100vh; /*disminuir aquí en el responsive*/
@@ -369,7 +369,7 @@ p {
   }
 }
 
-/*---HABILIDADES---*/
+
 .subject {
   font-family: var(--letter-subtitulos);
   color: var(--color-subtitle);
@@ -432,15 +432,7 @@ p {
   bottom: 120px;
 }
 
-footer {
-  background: var(--color-footer);
-}
 
-footer div {
-  position: relative;
-  margin: auto;
-  padding: 20px;
-}
 
 h2 {
   text-align: left;
@@ -667,6 +659,12 @@ h2 {
   bottom: 120px;
 }
 
+h2 {
+  text-align: left;
+}
+
+/*----FOOTER---*/
+
 footer {
   background: var(--color-footer);
 }
@@ -674,12 +672,22 @@ footer {
 footer div {
   position: relative;
   margin: auto;
-  padding: 20px;
+  padding: 15px;
+  width: 100%;
+}
+footer div p{
+  color: var(--colo-menu);
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-family: var(--letter-textos);
 }
 
-h2 {
-  text-align: left;
+.img-icon{
+  color: var(--colo-menu);
+  text-decoration: underline;
 }
+
 
 /*----------------Responsive-----------*/
 @media (min-width: 1440px) {
@@ -789,6 +797,9 @@ h2 {
   .subject {
       font-size: 12px;
   }
+  footer div p{
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 435px) {
@@ -843,5 +854,8 @@ h2 {
 @media (max-width: 326px) {
   .skills-container {
       width: 90%;
+  }
+  footer div p{
+    font-size: 5px;
   }
 }
